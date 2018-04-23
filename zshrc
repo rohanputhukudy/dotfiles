@@ -98,6 +98,9 @@ alias vpaper='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenS
 #wal generates a terminal colorscheme for a given image
 alias wal=/Library/Frameworks/Python.framework/Versions/3.6/bin/wal
 
+# plays Star Wars Episode IV in ASCII art
+alias starwars='telnet towel.blinkenlights.nl'
+
 # Changes iTerm's window title to name of current directory, in effect bc of no auto title (search defaults above)
 precmd() {
           # sets the tab title to current dir
