@@ -37,7 +37,7 @@ e.g: window-rules in a separate file called 'rules'
 */
 
 # Set default values for screen padding
-kwmc config padding 40 20 20 20
+kwmc config padding 60 20 20 20
 
 # Set default values for container gaps
 kwmc config gap 15 15
@@ -130,8 +130,8 @@ if the screen exists.
 
 # Enable border for focused window
 kwmc config border focused on
-kwmc config border focused size 2
-kwmc config border focused color 0xFFBDD322
+kwmc config border focused size 1.3
+kwmc config border focused color 0xFFA5D5FE
 kwmc config border focused radius 6
 
 # Enable border for marked window

@@ -60,3 +60,6 @@ nnoremap <C-l> <C-W><C-L>
 " Defaults splitscreen to bottom right
 set splitbelow
 set splitright
+
+au BufRead,BufNewFile kwmrc set filetype=kwm
+au! Syntax kwm source ~/.vim/syntax/kwm.vim
