@@ -101,6 +101,13 @@ alias wal=/Library/Frameworks/Python.framework/Versions/3.6/bin/wal
 # plays Star Wars Episode IV in ASCII art
 alias starwars='telnet towel.blinkenlights.nl'
 
+# Changes name of fb-messenger-cli
+alias messenger='fb-messenger-cli'
+
+# Can run python 2.7 by using \python to escape the alias
+alias python=python3
+alias pip=pip3
+
 # Changes iTerm's window title to name of current directory, in effect bc of no auto title (search defaults above)
 precmd() {
           # sets the tab title to current dir

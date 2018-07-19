@@ -17,7 +17,13 @@ Plugin 'artur-shaik/vim-javacomplete2'
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
-Plugin 'lervag/vimtex'
+" Plugin 'lervag/vimtex'
+" ':Goyo' toggles distraction free mode
+Plugin 'junegunn/goyo.vim'
+" Git wrapper for vim
+Plugin 'tpope/vim-fugitive'
+" Enables keystrokes for surrounding characters like '(' and '['
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,6 +52,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=0 noexpandtab
 
+" Highlights all search matches
+set hlsearch
+
 inoremap jk <esc> 
 inoremap JK <esc>
 
@@ -61,5 +70,14 @@ nnoremap <C-l> <C-W><C-L>
 set splitbelow
 set splitright
 
+" Turns on spell checker for txt files
+" use 'z=' when in Normal mode on mispelled word to get suggestions
+" use 'zg' to add a highlighted word to user dictionary
+" When the spellcheck is active, you should see 'SPELL' next to mode name
+au BufRead,BufNewFile *.txt set spell spelllang=en_us
+
 au BufRead,BufNewFile kwmrc set filetype=kwm
 au! Syntax kwm source ~/.vim/syntax/kwm.vim
+
+au BufRead,BufNewFile *.tex command Refresh execute "w | execute \"silent !pdflatex %\" | redraw!"
+au BufRead,BufNewFile *.tex map <C-R> :Refresh<CR>
