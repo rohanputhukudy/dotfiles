@@ -12,9 +12,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Put in all Plugins here
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'artur-shaik/vim-javacomplete2'
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
+" autocmd FileType java setlocal omnifunc=javacomplete#Complete
 Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 " Plugin 'lervag/vimtex'
@@ -75,9 +75,10 @@ set splitright
 " use 'zg' to add a highlighted word to user dictionary
 " When the spellcheck is active, you should see 'SPELL' next to mode name
 au BufRead,BufNewFile *.txt set spell spelllang=en_us
+au BufRead,BufNewFile *.tex set spell spelllang=en_us
 
 au BufRead,BufNewFile kwmrc set filetype=kwm
 au! Syntax kwm source ~/.vim/syntax/kwm.vim
 
-au BufRead,BufNewFile *.tex command Refresh execute "w | execute \"silent !pdflatex %\" | redraw!"
+au BufRead,BufNewFile *.tex command Refresh execute "w | execute \"silent !pdflatex % && latexmk -c\" | redraw!"
 au BufRead,BufNewFile *.tex map <C-R> :Refresh<CR>

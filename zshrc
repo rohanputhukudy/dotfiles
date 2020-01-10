@@ -106,6 +106,7 @@ alias messenger='fb-messenger-cli'
 
 # Can run python 2.7 by using \python to escape the alias
 alias python=python3
+alias pip3='python3 -m pip'
 alias pip=pip3
 
 # Changes iTerm's window title to name of current directory, in effect bc of no auto title (search defaults above)
