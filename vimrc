@@ -24,6 +24,8 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'tpope/vim-fugitive'
 " Enables keystrokes for surrounding characters like '(' and '['
 Plugin 'tpope/vim-surround'
+" Enables syntax highlighting for TypeScript
+Plugin 'leafgarland/typescript-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,6 +53,9 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=0 noexpandtab
+
+au BufRead,BufNewFile *.js set tabstop=2
+au BufRead,BufNewFile *.js set shiftwidth=2
 
 " Highlights all search matches
 set hlsearch
