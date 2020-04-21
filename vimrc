@@ -56,6 +56,8 @@ set softtabstop=0 noexpandtab
 
 au BufRead,BufNewFile *.js set tabstop=2
 au BufRead,BufNewFile *.js set shiftwidth=2
+au BufRead,BufNewFile *.tsx set tabstop=2
+au BufRead,BufNewFile *.tsx set shiftwidth=2
 
 " Highlights all search matches
 set hlsearch
@@ -79,7 +81,7 @@ set splitright
 " use 'z=' when in Normal mode on mispelled word to get suggestions
 " use 'zg' to add a highlighted word to user dictionary
 " When the spellcheck is active, you should see 'SPELL' next to mode name
-au BufRead,BufNewFile *.txt set spell spelllang=en_us
+" au BufRead,BufNewFile *.txt set spell spelllang=en_us
 au BufRead,BufNewFile *.tex set spell spelllang=en_us
 
 au BufRead,BufNewFile kwmrc set filetype=kwm

@@ -124,6 +124,7 @@ kwmc rule owner="Time Machine" properties={float="true"}
 kwmc rule owner="Avast" properties={float="true"}
 kwmc rule owner="Finder" properties={float="true"}
 kwmc rule owner="Simulator" properties={float="true"}
+kwmc rule owner="IINA" properties={float="true"}
 
 /*
 The following command creates a rule that
