@@ -1,2 +1,2 @@
 # Dotfiles
-A collection of some of my dotfiles for vim, kwm, and zsh
+A collection of some of my dotfiles for vim and zsh

@@ -88,9 +88,6 @@ set splitright
 " au BufRead,BufNewFile *.txt set spell spelllang=en_us
 au BufRead,BufNewFile *.tex set spell spelllang=en_us
 
-au BufRead,BufNewFile kwmrc set filetype=kwm
-au! Syntax kwm source ~/.vim/syntax/kwm.vim
-
 au BufRead,BufNewFile *.tex command Refresh execute "w | execute \"silent !latexmk -pdf % && latexmk -c\" | redraw!"
-au BufRead,BufNewFile *.tex map <C-R> :Refresh<CR>
+au BufRead,BufNewFile *.tex map <C-s> :Refresh<CR>
 au BufRead,BufNewFile *.tex set tw=111
