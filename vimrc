@@ -13,7 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Put in all Plugins here
 " Plugin 'Valloric/YouCompleteMe'
-Plugin 'artur-shaik/vim-javacomplete2'
+" Plugin 'artur-shaik/vim-javacomplete2'
 " autocmd FileType java setlocal omnifunc=javacomplete#Complete
 Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
@@ -21,11 +21,12 @@ Plugin 'scrooloose/nerdtree'
 " ':Goyo' toggles distraction free mode
 Plugin 'junegunn/goyo.vim'
 " Git wrapper for vim
-Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-fugitive'
 " Enables keystrokes for surrounding characters like '(' and '['
 Plugin 'tpope/vim-surround'
-" Enables syntax highlighting for TypeScript
-Plugin 'leafgarland/typescript-vim'
+" Adds rainbow colors for matching parentheses
+Plugin 'luochen1990/rainbow'
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,14 +51,17 @@ set number
 set autoindent
 set smartindent
 
+set expandtab
 set tabstop=4
 set shiftwidth=4
-set softtabstop=0 noexpandtab
+set softtabstop=4
 
 au BufRead,BufNewFile *.js set tabstop=2
 au BufRead,BufNewFile *.js set shiftwidth=2
+au BufRead,BufNewFile *.js set softtabstop=2
 au BufRead,BufNewFile *.tsx set tabstop=2
 au BufRead,BufNewFile *.tsx set shiftwidth=2
+au BufRead,BufNewFile *.tsx set softtabstop=2
 
 " Highlights all search matches
 set hlsearch
@@ -87,5 +91,6 @@ au BufRead,BufNewFile *.tex set spell spelllang=en_us
 au BufRead,BufNewFile kwmrc set filetype=kwm
 au! Syntax kwm source ~/.vim/syntax/kwm.vim
 
-au BufRead,BufNewFile *.tex command Refresh execute "w | execute \"silent !pdflatex % && latexmk -c\" | redraw!"
+au BufRead,BufNewFile *.tex command Refresh execute "w | execute \"silent !latexmk -pdf % && latexmk -c\" | redraw!"
 au BufRead,BufNewFile *.tex map <C-R> :Refresh<CR>
+au BufRead,BufNewFile *.tex set tw=111
