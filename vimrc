@@ -89,5 +89,6 @@ set splitright
 au BufRead,BufNewFile *.tex set spell spelllang=en_us
 
 au BufRead,BufNewFile *.tex command! Refresh execute "w | execute \"silent !latexmk -pdf % && latexmk -c\" | redraw!"
+au BufRead,BufNewFile /Users/rohan/Documents/UCSD/Representation\ Theory/Senior_Thesis/* command! Refresh execute "w | execute \"silent !latexmk -pdf honors_thesis.tex && latexmk -c\" | redraw!"
 au BufRead,BufNewFile *.tex map <C-s> :Refresh<CR>
 au BufRead,BufNewFile *.tex set tw=111
